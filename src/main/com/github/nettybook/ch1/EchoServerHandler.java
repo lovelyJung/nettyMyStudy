@@ -12,7 +12,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelRead(ChannelHandlerContext ctx, Object msg){
 		String readMessage = ((ByteBuf)msg).toString(Charset.defaultCharset());
 		
-		System.out.println("¼ö½ÅÇÑ ¹®ÀÚ¿­ [" + readMessage + "]");
+		System.out.println("ë°›ì€ë©”ì„¸ì§€ [" + readMessage + "]");
 		
 		ctx.write(msg);
 	}
