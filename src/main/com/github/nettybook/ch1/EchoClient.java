@@ -7,7 +7,7 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class EchoClient {
 	public static void main(String[] args) throws Exception{
@@ -16,7 +16,7 @@ public class EchoClient {
 		try {
 			Bootstrap b = new Bootstrap();
 			b.group(bossGroup)
-				.channel(NioServerSocketChannel.class)
+				.channel(NioSocketChannel.class)
 				.handler(new ChannelInitializer<SocketChannel>() {
 					@Override
 					public void initChannel(SocketChannel ch){
