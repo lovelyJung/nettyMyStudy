@@ -25,7 +25,7 @@ public class EchoClient {
 					}
 				});
 			
-			ChannelFuture f = b.connect("localhost", 8888);
+			ChannelFuture f = b.connect("localhost", 8888).sync();
 			
 			f.channel().closeFuture().sync();
 		} finally {
