@@ -63,6 +63,7 @@ public class DynamicByteBufferTest {
 
         assertEquals(13, buf.capacity());
         assertEquals(2, buf.writableBytes());
+        assertEquals("hello world", buf.toString(Charset.defaultCharset()));
 
         // FIXME expected raised exception but just passed.
 //        assertNotNull(buf.writeBytes("hello world test".getBytes()));
